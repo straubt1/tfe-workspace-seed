@@ -1,3 +1,7 @@
+variable "last_ws_mod_date" {
+  default = ""
+}
+
 resource "random_pet" "main" {
   length = 3
 }
