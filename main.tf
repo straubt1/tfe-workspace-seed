@@ -14,3 +14,4 @@ resource "random_pet" "main" {
 output "date" {
   value = var.last_ws_mod_date
 }
+#
