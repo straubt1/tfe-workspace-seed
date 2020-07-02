@@ -1,17 +1,8 @@
-variable "last_ws_mod_date" {
-  default = ""
-}
-
-variable "pet_prefix" {
-  default = ""
-}
-
+# Generate a change in the workspace
 resource "random_pet" "main" {
-  length = 3
-  prefix = var.pet_prefix
+  keepers = {
+    always = timestamp()
+  }
+  count  = 100
+  length = 10
 }
-
-output "date" {
-  value = var.last_ws_mod_date
-}
-##
