@@ -14,5 +14,5 @@ resource "random_pet" "main" {
 }
 
 output "test" {
-  value = jsonencode("{-dd}")
+  value = jsondecode(var.test_var)
 }
