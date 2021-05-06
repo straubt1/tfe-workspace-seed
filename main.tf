@@ -13,6 +13,11 @@ resource "random_pet" "main" {
   length = var.test_var
 }
 
+resource "random_password" "password" {
+  length           = 16
+  special          = true
+  override_special = "_%@"
+}
 output "test" {
-  value = jsondecode("{--")
+  value = jsondecode(random_password.password.id)
 }
