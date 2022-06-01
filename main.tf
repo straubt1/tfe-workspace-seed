@@ -12,3 +12,7 @@ resource "random_pet" "main" {
   count  = 100
   length = var.test_var
 }
+
+output "pet_name" {
+    value = random_pet.main.id
+}
