@@ -9,7 +9,6 @@ resource "random_pet" "main" {
   keepers = {
     always = timestamp()
   }
-  count  = var.test_var
   length = var.test_var
 }
 
