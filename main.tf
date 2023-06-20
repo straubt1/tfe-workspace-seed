@@ -12,7 +12,10 @@ resource "random_pet" "main" {
   length = var.test_var
 }
 
-resource "random_pet" "main2" {
+resource "null_resource" "main2" {
+  provisioner "local-exec" {
+    command = "exit 1"
+  }
 }
 
 output "pet_name" {
