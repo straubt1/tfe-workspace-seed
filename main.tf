@@ -1,7 +1,7 @@
 variable "test_var" {
   description  = "Dummy variable that can be used to force a variable error."
   type         = string
-  default      = 10
+  default      = 12
 }
 
 # Generate a change in the workspace
